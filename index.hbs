@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>{{title}}</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+  <link href="./css/style.css" rel="stylesheet">
+  {{!-- <script src="js/dist/index.js"></script> --}}
+  <link href='//fonts.googleapis.com/css?family=Noto+Sans:400,700' rel='stylesheet' type='text/css'>
+  <style>
+    header {
+      background: url('{{backgroundImage}}') center center no-repeat scroll;
+    }
+  </style>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                  <h1 class="tagline">{{title}}</h1>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <div class="container">
+      <hr>
+
+      <div class="row">
+        <div class="col-sm-4">
+            <h2>{{about.title}}</h2>
+              <p>{{about.content}}</p>
+            </div>
+            <div class="col-sm-4">
+              <h2>{{contact.title}}</h2>
+              {{#if contact.address}}
+                <address>
+                  <strong>{{title}}</strong><br/>
+                  {{contact.address}}
+                </address>
+              {{/if}}
+              <address>
+                {{#if contact.phone}}
+                  <abbr title="Phone">P:</abbr>{{contact.phone}}
+                  <br>
+                {{/if}}
+                {{#if contact.email}}
+                    <abbr title="Email">E:</abbr> <a href="mailto:{{contact.email}}">
+                      {{contact.email}}</a>
+                  {{/if}}
+                </address>
+            </div>
+          <h3 class="news-title">{{news.title}}</h3>
+          {{#if news.posts}}
+            {{#each news.posts}}
+              <div class="col-sm-8">
+                <h2>{{title}}</h2>
+                  <p>
+                    {{content}}
+                  </p>
+                </div><hr/>
+          {{/each}}
+          {{/if}}
+        </div>
+        <footer>
+            <div class="row">
+                <div class="col-lg-12">
+                  <p>Copyright &copy; {{title}}</p>
+                </div>
+            </div>
+        </footer>
+</body>
+</html>
