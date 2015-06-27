@@ -2,7 +2,6 @@
     "layout": "./index.hbs",
     "data": {
         "title": "創業社",
-        "website": "http://www.canner.io",
         "backgroundImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/1_Singapore_skyline.jpg/1600px-1_Singapore_skyline.jpg",
         "news": {
             "title": "News",
