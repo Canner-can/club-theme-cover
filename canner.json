@@ -21,12 +21,59 @@
             "title": "About Us",
             "content": "本社團成立於2010年，固定社課時間為星期三..."
         },
-
         "contact": {
             "title": "Contact Us",
             "email": "club@mail.com",
             "phone": "0912-000-000",
             "address": "Taipei, Taiwan"
         }
-    }   
+    },
+    "columns": {
+     "title": {
+        "~description": "您的社團名稱是？"
+      },
+       "news": {
+      	"~description": "社團的最新消息",
+
+      	"posts": {
+      		"~description": "消息",
+      		"title": {
+      			"~description": "標題"
+      		},
+      		"content": {
+      		 	"~description": "內文"
+      		}
+      	}
+
+      },
+       "about": {
+        "~description": "社團的簡介",
+        "content": "如何描述您的社團？"
+      },
+      "contact": {
+        "~description": "社團聯絡資訊",
+        "email": {
+          "~description": "您社團的email？",
+          "~format": "user.profile.email"
+         },
+        "facebook": {
+          "~description": "您社團的facebook？",
+          "~format": "link"
+        },
+        "phone": {
+          "~description": "您社團的聯絡電話？",
+          "~format": "user.profile.phone"
+        },
+        "address": {
+       	  "~description": "您社團的位於哪裡？"
+        }
+      },
+      "backgroundImage": {
+      	"~description": "您社團的照片？",
+        "~format": "image"
+      }
+    },
+    "seq": {
+ 		"seq": ["title", "about", "backgroundImage", "contact", "news"]   	
+    }
 }
